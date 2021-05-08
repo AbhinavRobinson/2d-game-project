@@ -1,0 +1,253 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Hero.tscn" type="PackedScene" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 50, 50 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Hero" parent="." instance=ExtResource( 1 )]
+position = Vector2( 511.735, 252.087 )
+
+[node name="Ground" type="Node2D" parent="."]
+
+[node name="Floor" type="StaticBody2D" parent="Ground"]
+position = Vector2( 350, 450 )
+
+[node name="ColorRect" type="ColorRect" parent="Ground/Floor"]
+margin_left = -50.0
+margin_top = -50.0
+margin_right = 50.0
+margin_bottom = 50.0
+color = Color( 0.0862745, 0.0862745, 0.113725, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/Floor"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Floor2" type="StaticBody2D" parent="Ground"]
+position = Vector2( 450, 450 )
+
+[node name="ColorRect" type="ColorRect" parent="Ground/Floor2"]
+margin_left = -50.0
+margin_top = -50.0
+margin_right = 50.0
+margin_bottom = 50.0
+color = Color( 0.0862745, 0.0862745, 0.113725, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/Floor2"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Floor3" type="StaticBody2D" parent="Ground"]
+position = Vector2( 550, 400 )
+
+[node name="ColorRect" type="ColorRect" parent="Ground/Floor3"]
+margin_left = -50.0
+margin_top = -50.0
+margin_right = 50.0
+margin_bottom = 50.0
+color = Color( 0.0862745, 0.0862745, 0.113725, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/Floor3"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Floor4" type="StaticBody2D" parent="Ground"]
+position = Vector2( 650, 400 )
+
+[node name="ColorRect" type="ColorRect" parent="Ground/Floor4"]
+margin_left = -50.0
+margin_top = -50.0
+margin_right = 50.0
+margin_bottom = 50.0
+color = Color( 0.0862745, 0.0862745, 0.113725, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/Floor4"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Floor5" type="StaticBody2D" parent="Ground"]
+position = Vector2( 750, 450 )
+
+[node name="ColorRect" type="ColorRect" parent="Ground/Floor5"]
+margin_left = -50.0
+margin_top = -50.0
+margin_right = 50.0
+margin_bottom = 50.0
+color = Color( 0.0862745, 0.0862745, 0.113725, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/Floor5"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Floor6" type="StaticBody2D" parent="Ground"]
+position = Vector2( 850, 450 )
+
+[node name="ColorRect" type="ColorRect" parent="Ground/Floor6"]
+margin_left = -50.0
+margin_top = -50.0
+margin_right = 50.0
+margin_bottom = 50.0
+color = Color( 0.0862745, 0.0862745, 0.113725, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/Floor6"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Floor7" type="StaticBody2D" parent="Ground"]
+position = Vector2( 950, 350 )
+
+[node name="ColorRect" type="ColorRect" parent="Ground/Floor7"]
+margin_left = -50.0
+margin_top = -50.0
+margin_right = 50.0
+margin_bottom = 50.0
+color = Color( 0.0862745, 0.0862745, 0.113725, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/Floor7"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Floor8" type="StaticBody2D" parent="Ground"]
+position = Vector2( 1050, 350 )
+
+[node name="ColorRect" type="ColorRect" parent="Ground/Floor8"]
+margin_left = -50.0
+margin_top = -50.0
+margin_right = 50.0
+margin_bottom = 50.0
+color = Color( 0.0862745, 0.0862745, 0.113725, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/Floor8"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Floor9" type="StaticBody2D" parent="Ground"]
+position = Vector2( 150, 350 )
+
+[node name="ColorRect" type="ColorRect" parent="Ground/Floor9"]
+margin_left = -50.0
+margin_top = -50.0
+margin_right = 50.0
+margin_bottom = 50.0
+color = Color( 0.0862745, 0.0862745, 0.113725, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/Floor9"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Floor10" type="StaticBody2D" parent="Ground"]
+position = Vector2( 250, 350 )
+
+[node name="ColorRect" type="ColorRect" parent="Ground/Floor10"]
+margin_left = -50.0
+margin_top = -50.0
+margin_right = 50.0
+margin_bottom = 50.0
+color = Color( 0.0862745, 0.0862745, 0.113725, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/Floor10"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Floor11" type="StaticBody2D" parent="Ground"]
+position = Vector2( 0, 250 )
+
+[node name="ColorRect" type="ColorRect" parent="Ground/Floor11"]
+margin_left = -50.0
+margin_top = -50.0
+margin_right = 50.0
+margin_bottom = 50.0
+color = Color( 0.0862745, 0.0862745, 0.113725, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/Floor11"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Floor12" type="StaticBody2D" parent="Ground"]
+position = Vector2( 100, 250 )
+
+[node name="ColorRect" type="ColorRect" parent="Ground/Floor12"]
+margin_left = -50.0
+margin_top = -50.0
+margin_right = 50.0
+margin_bottom = 50.0
+color = Color( 0.0862745, 0.0862745, 0.113725, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/Floor12"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
