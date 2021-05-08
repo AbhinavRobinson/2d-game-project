@@ -1,253 +1,164 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Hero.tscn" type="PackedScene" id=1]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 50, 50 )
+[ext_resource path="res://FloorTile.tscn" type="PackedScene" id=2]
 
 [node name="Node2D" type="Node2D"]
 
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_top = -50.0
+margin_right = 1050.0
+margin_bottom = 650.0
+color = Color( 0.396078, 0.607843, 0.643137, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Hero" parent="." instance=ExtResource( 1 )]
-position = Vector2( 511.735, 252.087 )
+position = Vector2( 400, 250 )
 
 [node name="Ground" type="Node2D" parent="."]
 
-[node name="Floor" type="StaticBody2D" parent="Ground"]
-position = Vector2( 350, 450 )
+[node name="Floor" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 500, 400 )
 
-[node name="ColorRect" type="ColorRect" parent="Ground/Floor"]
-margin_left = -50.0
-margin_top = -50.0
-margin_right = 50.0
-margin_bottom = 50.0
-color = Color( 0.0862745, 0.0862745, 0.113725, 1 )
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
+[node name="Floor2" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 400, 400 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/Floor"]
-shape = SubResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
+[node name="Floor3" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 300, 350 )
 
-[node name="Floor2" type="StaticBody2D" parent="Ground"]
-position = Vector2( 450, 450 )
+[node name="Floor4" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 250, 250 )
 
-[node name="ColorRect" type="ColorRect" parent="Ground/Floor2"]
-margin_left = -50.0
-margin_top = -50.0
-margin_right = 50.0
-margin_bottom = 50.0
-color = Color( 0.0862745, 0.0862745, 0.113725, 1 )
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
+[node name="Floor5" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 150, 300 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/Floor2"]
-shape = SubResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
+[node name="Floor22" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 300, 450 )
 
-[node name="Floor3" type="StaticBody2D" parent="Ground"]
-position = Vector2( 550, 400 )
+[node name="Floor23" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 150, 400 )
 
-[node name="ColorRect" type="ColorRect" parent="Ground/Floor3"]
-margin_left = -50.0
-margin_top = -50.0
-margin_right = 50.0
-margin_bottom = 50.0
-color = Color( 0.0862745, 0.0862745, 0.113725, 1 )
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
+[node name="Floor24" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 300, 550 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/Floor3"]
-shape = SubResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
+[node name="Floor25" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 150, 500 )
 
-[node name="Floor4" type="StaticBody2D" parent="Ground"]
-position = Vector2( 650, 400 )
+[node name="Floor30" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 50, 550 )
 
-[node name="ColorRect" type="ColorRect" parent="Ground/Floor4"]
-margin_left = -50.0
-margin_top = -50.0
-margin_right = 50.0
-margin_bottom = 50.0
-color = Color( 0.0862745, 0.0862745, 0.113725, 1 )
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
+[node name="Floor26" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 300, 550 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/Floor4"]
-shape = SubResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Floor5" type="StaticBody2D" parent="Ground"]
-position = Vector2( 750, 450 )
-
-[node name="ColorRect" type="ColorRect" parent="Ground/Floor5"]
-margin_left = -50.0
-margin_top = -50.0
-margin_right = 50.0
-margin_bottom = 50.0
-color = Color( 0.0862745, 0.0862745, 0.113725, 1 )
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/Floor5"]
-shape = SubResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Floor6" type="StaticBody2D" parent="Ground"]
-position = Vector2( 850, 450 )
-
-[node name="ColorRect" type="ColorRect" parent="Ground/Floor6"]
-margin_left = -50.0
-margin_top = -50.0
-margin_right = 50.0
-margin_bottom = 50.0
-color = Color( 0.0862745, 0.0862745, 0.113725, 1 )
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/Floor6"]
-shape = SubResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Floor7" type="StaticBody2D" parent="Ground"]
-position = Vector2( 950, 350 )
-
-[node name="ColorRect" type="ColorRect" parent="Ground/Floor7"]
-margin_left = -50.0
-margin_top = -50.0
-margin_right = 50.0
-margin_bottom = 50.0
-color = Color( 0.0862745, 0.0862745, 0.113725, 1 )
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/Floor7"]
-shape = SubResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Floor8" type="StaticBody2D" parent="Ground"]
-position = Vector2( 1050, 350 )
-
-[node name="ColorRect" type="ColorRect" parent="Ground/Floor8"]
-margin_left = -50.0
-margin_top = -50.0
-margin_right = 50.0
-margin_bottom = 50.0
-color = Color( 0.0862745, 0.0862745, 0.113725, 1 )
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/Floor8"]
-shape = SubResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Floor9" type="StaticBody2D" parent="Ground"]
-position = Vector2( 150, 350 )
-
-[node name="ColorRect" type="ColorRect" parent="Ground/Floor9"]
-margin_left = -50.0
-margin_top = -50.0
-margin_right = 50.0
-margin_bottom = 50.0
-color = Color( 0.0862745, 0.0862745, 0.113725, 1 )
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/Floor9"]
-shape = SubResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Floor10" type="StaticBody2D" parent="Ground"]
+[node name="Floor41" parent="Ground" instance=ExtResource( 2 )]
 position = Vector2( 250, 350 )
 
-[node name="ColorRect" type="ColorRect" parent="Ground/Floor10"]
-margin_left = -50.0
-margin_top = -50.0
-margin_right = 50.0
-margin_bottom = 50.0
-color = Color( 0.0862745, 0.0862745, 0.113725, 1 )
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
+[node name="Floor42" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 250, 450 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/Floor10"]
-shape = SubResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
+[node name="Floor43" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 250, 550 )
 
-[node name="Floor11" type="StaticBody2D" parent="Ground"]
-position = Vector2( 0, 250 )
+[node name="Floor27" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 50, 450 )
 
-[node name="ColorRect" type="ColorRect" parent="Ground/Floor11"]
-margin_left = -50.0
-margin_top = -50.0
-margin_right = 50.0
-margin_bottom = 50.0
-color = Color( 0.0862745, 0.0862745, 0.113725, 1 )
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
+[node name="Floor28" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 50, 350 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/Floor11"]
-shape = SubResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
+[node name="Floor29" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 150, 600 )
 
-[node name="Floor12" type="StaticBody2D" parent="Ground"]
-position = Vector2( 100, 250 )
+[node name="Floor6" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 50, 250 )
 
-[node name="ColorRect" type="ColorRect" parent="Ground/Floor12"]
-margin_left = -50.0
-margin_top = -50.0
-margin_right = 50.0
-margin_bottom = 50.0
-color = Color( 0.0862745, 0.0862745, 0.113725, 1 )
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
+[node name="Floor44" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 50, 150 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/Floor12"]
-shape = SubResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
+[node name="Floor45" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 50, 50 )
+
+[node name="Floor46" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 600, 250 )
+
+[node name="Floor47" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 500, 200 )
+
+[node name="Floor48" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 750, 150 )
+
+[node name="Floor7" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 600, 400 )
+
+[node name="Floor8" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 700, 400 )
+
+[node name="Floor14" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 500, 500 )
+
+[node name="Floor15" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 400, 500 )
+
+[node name="Floor16" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 600, 500 )
+
+[node name="Floor17" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 700, 500 )
+
+[node name="Floor18" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 500, 600 )
+
+[node name="Floor19" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 400, 600 )
+
+[node name="Floor20" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 600, 600 )
+
+[node name="Floor21" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 700, 600 )
+
+[node name="Floor9" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 800, 350 )
+
+[node name="Floor31" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 800, 450 )
+
+[node name="Floor32" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 800, 550 )
+
+[node name="Floor10" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 900, 300 )
+
+[node name="Floor33" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 900, 400 )
+
+[node name="Floor34" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 900, 500 )
+
+[node name="Floor35" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 900, 600 )
+
+[node name="Floor11" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 950, 200 )
+
+[node name="Floor12" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 1000, 100 )
+
+[node name="Floor36" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 1000, 200 )
+
+[node name="Floor13" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 1000, 0 )
+
+[node name="Floor37" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 1000, 400 )
+
+[node name="Floor38" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 1000, 500 )
+
+[node name="Floor40" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 1000, 600 )
+
+[node name="Floor39" parent="Ground" instance=ExtResource( 2 )]
+position = Vector2( 1000, 300 )
