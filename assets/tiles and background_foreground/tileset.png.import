@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/herochar_jump_up_anim_strip_3.png-d48c83dd17ef23a3b82285f05a8565dd.stex"
+path="res://.import/tileset.png-5776cfc83b33854787ace7f41a531661.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/herochar sprites/herochar_jump_up_anim_strip_3.png"
-dest_files=[ "res://.import/herochar_jump_up_anim_strip_3.png-d48c83dd17ef23a3b82285f05a8565dd.stex" ]
+source_file="res://assets/tiles and background_foreground/tileset.png"
+dest_files=[ "res://.import/tileset.png-5776cfc83b33854787ace7f41a531661.stex" ]
 
 [params]
 
