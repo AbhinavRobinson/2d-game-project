@@ -4,7 +4,7 @@ const UP = Vector2(0,-1)
 
 # SPEED of player
 export var SPEED = 200.0
-export var JUMP_HEIGHT = 350.0
+export var JUMP_HEIGHT = 250.0
 export var GRAVITY = 10.0
 
 # screen size of window
@@ -19,10 +19,13 @@ func _ready():
 	SCREEN_SIZE = get_viewport_rect().size
 	$AnimatedSprite.play()
 
+var justJumped = 0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):	
 	motion.y += GRAVITY
+	if justJumped > 0:
+		justJumped-=1
 	
 	# get player input X
 	if Input.is_action_pressed("move_right"):
@@ -35,9 +38,14 @@ func _process(delta):
 	else:
 		motion.x = 0.0 
 		
+	# A bit more complex jump scene
 	if is_on_floor():
 		if Input.is_action_just_pressed("move_up"):
-			motion.y = -JUMP_HEIGHT
+			$AnimatedSprite.animation = "beforeJump"
+			justJumped = 7
+			
+	if justJumped == 3:
+		motion.y = -JUMP_HEIGHT
 	
 	# move player
 	motion = move_and_slide(motion, UP)
@@ -47,13 +55,13 @@ func _process(delta):
 	position.y = clamp(position.y, 0 ,SCREEN_SIZE.y)
 	
 	# give animation direction (left/right/up/down)
-	if motion.x != 0 and is_on_floor():
-		$AnimatedSprite.animation = "run"
-		$AnimatedSprite.flip_h = motion.x < 0
-	else:
-		$AnimatedSprite.animation = "idle"
-		$AnimatedSprite.flip_h = motion.x < 0
-	
-	if not is_on_floor():
-		$AnimatedSprite.animation = "jump"
-		$AnimatedSprite.flip_h = motion.x < 0
+	if justJumped == 0:
+		if motion.x != 0 and is_on_floor():
+			$AnimatedSprite.animation = "run"
+			$AnimatedSprite.flip_h = motion.x < 0
+		elif motion.x == 0 and is_on_floor():
+			$AnimatedSprite.animation = "idle"
+			$AnimatedSprite.flip_h = motion.x < 0	
+		elif not is_on_floor():
+			$AnimatedSprite.animation = "jump"
+			$AnimatedSprite.flip_h = motion.x < 0
